@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+int enterUserAge();
+
+int main()
+
+{
+
+	std::cout << "Enter your name: ";
+
+	std::string yourName {};
+
+	std::getline(std::cin >> std::ws, yourName);
+
+	int userAge{ enterUserAge() };
+
+	std::cout << "You've lived " << static_cast <double> (userAge)/yourName.length() << " years for each letter in your name.\n";
+
+	return 0;
+
+}
+
+int enterUserAge()
+{
+
+	std::cout << "Enter your age: ";
+
+	int age{};
+
+	std::cin >> age;
+
+	return age;
+}
